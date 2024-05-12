@@ -4,5 +4,7 @@
 [Ll]ib64
 [Ll]ocal
 [Ss]cripts
+
 venv
 db.sqlite3
+.env
