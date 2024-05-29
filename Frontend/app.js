@@ -6,7 +6,7 @@ const loadServices = () => {
 };
 
 const displayService = (services) => {
-    // console.log(services);
+  //   console.log(services);
   services.forEach((service) => {
     const parent = document.getElementById("service-container");
     const li = document.createElement("li");
@@ -65,7 +65,7 @@ const displyDoctors = (doctors) => {
     div.classList.add("doc-card");
     div.innerHTML = `
         <img class="doc-img" src=${doctor.image} alt="" />
-              <h4>${doctor?.user}</h4>
+              <h4>${doctor?.full_name}</h4>
               <h6>${doctor?.designation[0]}</h6>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
@@ -123,7 +123,7 @@ const handleSearch = () => {
 };
 
 const loadReview = () => {
-  fetch("https://testing-8az5.onrender.com/doctor/review/")
+  fetch("http://127.0.0.1:8000/doctor/reviews/")
     .then((res) => res.json())
     .then((data) => displayReview(data));
 };
@@ -149,4 +149,4 @@ loadServices();
 loadDoctors();
 loadDesignation();
 loadSpecialization();
-// loadReview();
+loadReview();
