@@ -7,13 +7,14 @@ from . views import UserViewSet
 router = DefaultRouter()
 router.register('users', UserViewSet)
 urlpatterns = [
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
-    path('appointment/', include('appointment.urls')),
     path('contact_us/', include('contact_us.urls')),
-    path('doctor/', include('doctor.urls')),
-    path('patient/', include('patient.urls')),
     path('services/', include('service.urls')),
-
+    path('patient/', include('patient.urls')),
+    path('doctor/', include('doctor.urls')),
+    path('appointment/', include('appointment.urls')),
 ]
+
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

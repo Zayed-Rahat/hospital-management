@@ -65,7 +65,7 @@ const displyDoctors = (doctors) => {
     div.classList.add("doc-card");
     div.innerHTML = `
         <img class="doc-img" src=${doctor.image} alt="" />
-              <h4>${doctor?.full_name}</h4>
+              <h4>${doctor?.user}</h4>
               <h6>${doctor?.designation[0]}</h6>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,

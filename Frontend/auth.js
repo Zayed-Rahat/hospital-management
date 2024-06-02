@@ -6,7 +6,6 @@ const handleRegistration = (event) => {
   const email = getValue("email");
   const password = getValue("password");
   const confirm_password = getValue("confirm_password");
-  // console.log(password);
   const info = {
     username,
     first_name,
@@ -23,7 +22,7 @@ const handleRegistration = (event) => {
         password
       )
     ) {
-      // console.log(info);
+      console.log(info);
 
       fetch("http://127.0.0.1:8000/patient/register/", {
         method: "POST",
@@ -34,7 +33,7 @@ const handleRegistration = (event) => {
         .then((data) => console.log(data));
     } else {
       document.getElementById("error").innerText =
-        "Password must contain eight characters, at least one letter, one number and one special character";
+        "Pass must contain eight characters, at least one letter, one number and one special character:";
     }
   } else {
     document.getElementById("error").innerText =

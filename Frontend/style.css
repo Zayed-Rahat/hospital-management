@@ -2,7 +2,7 @@ body{
     /* width: 1200px; */
     /* border: 1px solid gray; */
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(241, 234, 234);
 }
 li{
     list-style: none;
@@ -31,15 +31,14 @@ nav{
     text-align: center;
     justify-content: space-around;
     align-items: center;
-    background: linear-gradient(rgb(0, 140, 255),rgb(33, 137, 137));
+    background: linear-gradient(cyan,rgb(33, 137, 137));
     box-shadow: 4px 4px 8px gray;
     border-radius:10px;
-    color: antiquewhite;
     /* padding: 30px; */
 }
 .bn-img{
-    width: 300px;
-    margin-top: -50px;
+    width: 325px;
+    margin-top:-50px;
 }
 .service-container{
     width: 1200px;

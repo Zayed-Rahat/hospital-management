@@ -5,7 +5,7 @@ const getparams = () => {
     .then((res) => res.json())
     .then((data) => displayDetails(data));
 
-  fetch(`http://127.0.0.1:8000/doctor/review/?doctor_id=${param}`)
+  fetch(`http://127.0.0.1:8000/doctor/reviews/?doctor_id=${param}`)
     .then((res) => res.json())
     .then((data) => doctorReview(data));
 };
@@ -28,7 +28,7 @@ const doctorReview = (reviews) => {
 };
 
 const displayDetails = (doctor) => {
-  console.log(doctor);
+  // console.log(doctor);
   const parent = document.getElementById("doc-details");
   const div = document.createElement("div");
   div.classList.add("doc-details-container");
@@ -37,7 +37,7 @@ const displayDetails = (doctor) => {
     <img src=${doctor.image} alt="" />
   </div>
   <div class="doc-info">
-    <h1>${doctor.full_name} </h1>
+    <h1>${doctor.user} </h1>
     ${doctor.specialization.map((item) => {
       return `<button class="doc-detail-btn">${item}</button>`;
     })}
@@ -77,7 +77,7 @@ const loadTime = (id) => {
         option.innerText = item.name;
         parent.appendChild(option);
       });
-      console.log(data);
+      // console.log(data);
     });
 };
 
@@ -99,7 +99,7 @@ const handleAppointment = () => {
     doctor: param,
   };
 
-  console.log(info);
+  // console.log(info);
   fetch("http://127.0.0.1:8000/appointment/", {
     method: "POST",
     headers: { "content-type": "application/json" },

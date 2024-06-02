@@ -26,9 +26,10 @@
         <h3>SmartCare</h3>
       </div>
       <div class="menu-container d-flex gap-3">
-        <li class="menu"><a href="index.html"></a></li>
+        <li class="menu"><a href="index.html">Home</a></li>
         <li class="menu">Services</li>
         <li class="menu">Contact us</li>
+        <li class="menu" id="login-button"><a href="login.html">Login</a></li>
         <div class="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"
@@ -48,24 +49,31 @@
                 >profile</a
               >
             </li>
-            <li><a class="dropdown-item" href="#">all Appointment</a></li>
-            <li><a class="dropdown-item" href="#">logout</a></li>
+            <li>
+              <a class="dropdown-item" href="allAppointments.html"
+                >all Appointment</a
+              >
+            </li>
+            <li onclick="handlelogOut()">
+              <a class="dropdown-item">logout</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
+
 
     <div class="all-appointment-container">
       <table class="table">
         <thead>
           <tr>
             <th>ID</th>
-            <th>symptom</th>
-            <th>type</th>
-            <th>status</th>
-            <th>doctor</th>
-            <th>fees</th>
-            <th>action</th>
+            <th>Symptom</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Doctor</th>
+            <th>Fees</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody id="table-body">
@@ -87,14 +95,14 @@
         </div>
         <div class="col-md-3">
           <h5>Company</h5>
-          <li>ABout</li>
+          <li>About</li>
           <li>Contact us</li>
           <li>Culture</li>
           <li>Blog</li>
         </div>
         <div class="col-md-3">
           <h5>Company</h5>
-          <li>ABout</li>
+          <li>About</li>
           <li>Contact us</li>
           <li>Culture</li>
           <li>Blog</li>

@@ -1,6 +1,6 @@
 const loadUserDetails = () => {
   const user_id = localStorage.getItem("user_id");
-  fetch(`http://127.0.0.1:8000/patient/users/${user_id}`)
+  fetch(`http://127.0.0.1:8000/users/${user_id}`)
     .then((res) => res.json())
     .then((data) => {
       const parent = document.getElementById("user-detais-container");
